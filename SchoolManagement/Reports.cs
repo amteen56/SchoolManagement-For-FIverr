@@ -10,29 +10,38 @@ using System.Windows.Forms;
 
 namespace SchoolManagement
 {
-    public partial class CreateStudent : Form
+    public partial class Reports : Form
     {
         List<Student> kids = new List<Student>();
         List<Course> classes = new List<Course>();
         List<Grade> grades = new List<Grade>();
         string school = "PITT";
         RegistrationSys pitt;
-        public CreateStudent()
+
+        public Reports()
         {
             InitializeComponent();
             pitt = new RegistrationSys(school, kids, classes, grades);
             pitt.get();
         }
-        
-        private void button3_Click(object sender, EventArgs e)
+
+        private void button5_Click(object sender, EventArgs e)
         {
-            
-            pitt.createStudent(nametext.Text, int.Parse(idtext.Text));
-            MessageBox.Show("Student Created");
-            pitt.save();
+            richTextBox1.Text= pitt.getAllCourses();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = pitt.getAllStudents();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = pitt.printAllGrades();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

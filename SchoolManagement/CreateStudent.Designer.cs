@@ -35,6 +35,7 @@
             this.nametext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.idtext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel6
@@ -132,12 +133,24 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "ID:";
             // 
-            // Form1
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(777, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 39);
+            this.label2.TabIndex = 100;
+            this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // CreateStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(830, 342);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.idtext);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nametext);
@@ -148,7 +161,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Form1";
+            this.Name = "CreateStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -165,6 +178,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox nametext;
         private Bunifu.Framework.UI.BunifuMaterialTextbox idtext;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

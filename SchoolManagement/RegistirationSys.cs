@@ -186,30 +186,35 @@ namespace SchoolManagement
             kids.Add(s);
         }
 
-        public void getAllStudents()
+        public string getAllStudents()
         {
+            string msg = "";
             foreach (Student s in kids)
             {
-                MessageBox.Show(s.toString());
+                msg+=s.toString()+"\n";
             }
+            return msg;
         }
 
-        public void getAllCourses()
+        public string getAllCourses()
         {
+            string msg = "";
             foreach (Course c in classes)
             {
-                MessageBox.Show(c.toString());
+                msg+=c.toString() + "\n";
             }
+            return msg;
         }
 
-        public void printAllGrades()
+        public string printAllGrades()
         {
-           
+            string msg = "";
             foreach (Grade g in Grades)
             {
-                MessageBox.Show(g.toString());
+                msg+=g.toString() + "\n";
             }
 
+            return msg;
         }
         public string printAllGradesBySID(int SID)
         {

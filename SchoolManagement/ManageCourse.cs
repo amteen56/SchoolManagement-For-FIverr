@@ -105,5 +105,10 @@ namespace SchoolManagement
         {
             richTextBox1.Text = pitt.printClassAverage(int.Parse(nametext.Text));
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

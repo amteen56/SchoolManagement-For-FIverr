@@ -75,5 +75,10 @@ namespace SchoolManagement
         {
             richTextBox1.Text = pitt.printStudentAverage(int.Parse(nametext.Text));
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

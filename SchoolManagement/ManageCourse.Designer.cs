@@ -52,6 +52,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.bunifuMaterialTextbox6 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -400,12 +401,24 @@
             this.label6.TabIndex = 82;
             this.label6.Text = "Student ID:";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(778, -4);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 39);
+            this.label7.TabIndex = 100;
+            this.label7.Text = "X";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
             // ManageCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(812, 788);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.bunifuMaterialTextbox6);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button7);
@@ -464,5 +477,6 @@
         private System.Windows.Forms.Button button7;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox6;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
