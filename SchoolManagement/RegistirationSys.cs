@@ -49,30 +49,30 @@ namespace SchoolManagement
         }
 
 
-        public void printClassAverage(int CID)
+        public string printClassAverage(int CID)
         {
             if ((getCourseByID(CID).getClassAverage()) == -1)
             {
-                MessageBox.Show("No grades yet Assigned");
+                return "No grades yet Assigned";
             }
             else
             {
-                MessageBox.Show("Class Average: " + getCourseByID(CID).getClassAverage());
+                return "Class Average: " + getCourseByID(CID).getClassAverage();
 
             }
 
         }
 
-        public void printStudentAverage(int SID)
+        public string printStudentAverage(int SID)
         {
             if (getStudentByID(SID).getGPA() == -1)
             {
                 MessageBox.Show("No grades yet Assigned");
+                return "";
             }
             else
             {
-                MessageBox.Show("GPA: " + getStudentByID(SID).getGPA());
-
+                return "GPA: " + getStudentByID(SID).getGPA();
             }
 
         }
@@ -211,24 +211,24 @@ namespace SchoolManagement
             }
 
         }
-        public void printAllGradesBySID(int SID)
+        public string printAllGradesBySID(int SID)
         {
-
+            string msg = "";
             foreach (Grade g in getStudentByID(SID).getMyGrades())
             {
-                MessageBox.Show(g.toString());
+                msg+=g.toString()+"\n";
             }
-
+            return msg;
         }
 
-        public void printAllGradesByCID(int CID)
+        public string printAllGradesByCID(int CID)
         {
-
+            string msg = "";
             foreach (Grade g in getCourseByID(CID).getMyGrades())
             {
-                MessageBox.Show(g.toString());
+                msg+=g.toString()+"\n";
             }
-
+            return msg;
         }
         public void get()
         {
